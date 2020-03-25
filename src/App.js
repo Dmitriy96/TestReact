@@ -1,15 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Button from './button'
+import ButtonClass from './buttonClass'
+import Li from './customList'
 
 function App() {
+  let arrList = ["Кнопка 1", "Кнопка 2", "Кнопка 3"]
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
+          sadffdsdsfsdfsdfsdf
         </p>
+        <Button buttonTitle = {"Click"} />
+        <ButtonClass />
+        <ul>
+        {arrList.map((btn, ind) => (<Li key={btn+ind} customList={btn}/>))}
+        </ul>
+
         <a
           className="App-link"
           href="https://reactjs.org"
